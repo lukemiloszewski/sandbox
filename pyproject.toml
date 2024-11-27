@@ -1,0 +1,17 @@
+[tool.ruff]
+line-length = 100
+lint.ignore = [
+    "E501",  # line too long, handled by black
+    "E731",  # lambda assignment
+    "UP007", # optional
+]
+lint.select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+]
+
+[tool.ruff.lint.isort]
+section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]

@@ -1,11 +1,10 @@
 import os
-from typing import List, Union, Protocol
+from typing import List, Protocol, Union
 
 import dotenv
 import httpx
-from sentence_transformers import SentenceTransformer
 from openai import OpenAI, resources
-
+from sentence_transformers import SentenceTransformer
 
 dotenv.load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")

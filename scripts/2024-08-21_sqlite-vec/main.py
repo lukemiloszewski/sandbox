@@ -5,7 +5,6 @@ import sqlite3
 import struct
 from typing import List
 
-
 path_to_dll = pathlib.Path("C:\\Users\\lmiloszewski\\dev_programs\\vec0.dll")
 # path_to_dll = pathlib.Path("C:\\Users\\lmiloszewski\\code\\sandbox\\.venv\\Lib\\site-packages\\sqlite_vec\\vec0.dll")
 
@@ -25,12 +24,10 @@ def check_sqlite_vec():
 
 def serialize_f32(vector: List[float]) -> bytes:
     """serializes a list of floats into a compact "raw bytes" format"""
-    return struct.pack("%sf" % len(vector), *vector)
+    return struct.pack("%sf" % len(vector), *vector)  # noqa: UP031
 
 
-sqlite_version, vec_version = db.execute(
-    "select sqlite_version(), vec_version()"
-).fetchone()
+sqlite_version, vec_version = db.execute("select sqlite_version(), vec_version()").fetchone()
 print(f"sqlite_version={sqlite_version}, vec_version={vec_version}")
 
 items = [

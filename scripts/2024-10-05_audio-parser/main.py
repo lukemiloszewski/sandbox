@@ -4,7 +4,6 @@ import ssl
 
 from pydub import AudioSegment
 
-
 ssl._create_default_https_context = ssl._create_unverified_context
 ROOT_PATH = pathlib.Path(__file__).parent.parent
 
@@ -38,16 +37,16 @@ def extract_audio_metadata(audio_file, bit_rate=16):
     sample_width = audio.sample_width
     duration_in_sec = len(audio) / 1000
     sample_rate = audio.frame_rate
-    
+
     file_size = (sample_rate * bit_rate * channel_count * duration_in_sec) / 8
-    
+
     return {
         "sample_width": sample_width,
         "channel_count": channel_count,
         "duration_in_sec": duration_in_sec,
         "sample_rate": sample_rate,
         "bit_rate": bit_rate,
-        "file_size_bytes": file_size
+        "file_size_bytes": file_size,
     }
 
 
@@ -60,7 +59,7 @@ def calculate_chunk_duration(audio_file, chunk_size_mb):
     :return: Duration in seconds for each chunk.
     """
     audio = AudioSegment.from_file(audio_file, format="mp3")
-    
+
     chunk_size_bytes = chunk_size_mb * 1024 * 1024
     file_size_bytes = pathlib.Path(audio_file).stat().st_size
     num_chunks = file_size_bytes / chunk_size_bytes
@@ -81,22 +80,18 @@ Use only the context provided. If there is no context provided say, 'No context 
         model="gpt-3.5-turbo",
         temperature=0,
         messages=[
-            {
-                "role": "system",
-                "content": system_prompt
-            },
-            {
-                "role": "user",
-                "content": ascii_transcript
-            }
-        ]
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": ascii_transcript},
+        ],
     )
     return response
 
 
 if __name__ == "__main__":
     original_audio = AudioSegment.from_file(ROOT_PATH / "data/podcasts/lex_ai_sam_altman_2.mp3")
-    chunk_duration = calculate_chunk_duration(ROOT_PATH / "data/podcasts/lex_ai_sam_altman_2.mp3", 3)
+    chunk_duration = calculate_chunk_duration(
+        ROOT_PATH / "data/podcasts/lex_ai_sam_altman_2.mp3", 3
+    )
 
     chunk_duration_milliseconds = int(chunk_duration * 1000)
     start_time = 0
@@ -108,7 +103,7 @@ if __name__ == "__main__":
         os.makedirs(output_dir_trimmed)
 
     while start_time < len(original_audio):
-        segment = original_audio[start_time:start_time + chunk_duration_milliseconds]
+        segment = original_audio[start_time : start_time + chunk_duration_milliseconds]
         segment.export(os.path.join(output_dir_trimmed, f"trimmed_{i:02d}.wav"), format="wav")
         start_time += chunk_duration_milliseconds
         i += 1

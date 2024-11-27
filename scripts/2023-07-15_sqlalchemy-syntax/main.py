@@ -2,7 +2,6 @@ from sqlalchemy import Column, Integer, MetaData, Table, create_engine, insert, 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-
 # --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
 

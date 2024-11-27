@@ -36,9 +36,7 @@ legend_years = [2004, 2007, 2008, 2009, 2013, 2018, 2022]
 # create a plot for each year
 for year in range(start_date.year, end_date.year):
     forex_data_year = forex_data.loc[str(year)].copy()
-    forex_data_year["cumulative_return"] = (
-        1 + forex_data_year["daily_return"]
-    ).cumprod() - 1
+    forex_data_year["cumulative_return"] = (1 + forex_data_year["daily_return"]).cumprod() - 1
 
     if year in legend_years:
         if forex_data_year["cumulative_return"].iloc[-1] >= 0:

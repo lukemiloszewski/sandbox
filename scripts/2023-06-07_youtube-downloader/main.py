@@ -7,7 +7,6 @@ Requirements:
 """
 
 import pathlib
-
 from typing import Optional
 
 from yt_dlp import YoutubeDL

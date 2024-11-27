@@ -1,5 +1,5 @@
-import os
 import datetime
+import os
 
 import win32com.client
 
@@ -29,16 +29,11 @@ def save_attachments(start_date, end_date, names, file_extensions, save_folder):
 
     for item in items:
         if item.Class == 43:  # 43 is the constant for MailItem in Outlook
-            if any(name in item.To for name in names) or any(
-                name in item.CC for name in names
-            ):
+            if any(name in item.To for name in names) or any(name in item.CC for name in names):
                 received_time = item.ReceivedTime.strftime("%Y-%m-%d_%H-%M-%S")
 
                 for attachment in item.Attachments:
-                    if any(
-                        attachment.FileName.lower().endswith(ext)
-                        for ext in file_extensions
-                    ):
+                    if any(attachment.FileName.lower().endswith(ext) for ext in file_extensions):
                         filename = f"{received_time}_{attachment.FileName}"
                         filepath = os.path.join(save_folder, filename)
 

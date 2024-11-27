@@ -1,8 +1,7 @@
 import os
 
-from openai import OpenAI
 import dotenv
-
+from openai import OpenAI
 
 dotenv.load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")

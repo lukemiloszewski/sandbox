@@ -1,9 +1,10 @@
 import pathlib
 
-import requests
 import feedparser
+import requests
 
 ROOT_PATH = pathlib.Path(__file__).parent.parent
+
 
 def download_mp3(url, save_path):
     """

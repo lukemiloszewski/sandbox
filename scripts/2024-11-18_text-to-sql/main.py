@@ -70,9 +70,7 @@ Which table is most relevant? Respond with just the table name.""",
 
     def _generate_sql_from_query(self, query: str, table_name: str) -> str:
         """Generate SQL query for the given natural language query."""
-        table_schema = next(
-            (s for s in self.table_schemas if s["table_name"] == table_name), None
-        )
+        table_schema = next((s for s in self.table_schemas if s["table_name"] == table_name), None)
         if not table_schema:
             raise ValueError(f"Table '{table_name}' not found in database")
 

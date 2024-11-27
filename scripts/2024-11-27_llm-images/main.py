@@ -1,22 +1,19 @@
 import base64
 import mimetypes
 import os
+from pathlib import Path
 from urllib.parse import urlparse
 
 import dotenv
 import requests
 import tiktoken
 from openai_messages_token_helper import count_tokens_for_image
-from pathlib import Path
-
 
 dotenv.load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 
-def calculate_token_count_from_text(
-    text: str, encoding_name: str = "cl100k_base"
-) -> int:
+def calculate_token_count_from_text(text: str, encoding_name: str = "cl100k_base") -> int:
     tokens = _generate_tokens(text, encoding_name)
     return len(tokens)
 

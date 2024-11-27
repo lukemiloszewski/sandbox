@@ -1,6 +1,5 @@
 import re
 import time
-
 from datetime import datetime
 
 import pandas as pd
@@ -36,9 +35,7 @@ def _get_crumbs_and_cookies(stock):
     while True:
         response = requests.get(url, headers=header)
         if response.status_code != 200:
-            raise ConnectionError(
-                f"Failed to retrieve data: HTTP {response.status_code}"
-            )
+            raise ConnectionError(f"Failed to retrieve data: HTTP {response.status_code}")
 
         crumb_pattern = r'"crumb":"([a-zA-Z0-9]*)"'
         crumb_match = re.search(crumb_pattern, response.text)

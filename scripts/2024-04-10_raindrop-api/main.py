@@ -1,12 +1,10 @@
 import datetime
 import os
 import pathlib
-
 from typing import List
 
 import dotenv
 import requests
-
 from rich.pretty import pprint
 
 dotenv.load_dotenv()
@@ -31,9 +29,7 @@ def fetch_data(search_query: str = None) -> dict:
     if search_query:
         base_url += f"?search={search_query}"
 
-    response = requests.get(
-        base_url, headers={"Authorization": "Bearer " + RAINDROP_API_KEY}
-    )
+    response = requests.get(base_url, headers={"Authorization": "Bearer " + RAINDROP_API_KEY})
     return response.json()
 
 

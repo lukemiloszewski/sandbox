@@ -1,7 +1,6 @@
 import pathlib
 
 import pandas as pd
-
 from pypfopt import EfficientFrontier, expected_returns, risk_models
 from pypfopt.discrete_allocation import DiscreteAllocation, get_latest_prices
 
