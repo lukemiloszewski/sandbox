@@ -1,11 +1,10 @@
-from typing import List
-import spotipy
-from spotipy.oauth2 import SpotifyOAuth
 import os
+from typing import List
 
 import dotenv
-
+import spotipy
 from rich.pretty import pprint
+from spotipy.oauth2 import SpotifyOAuth
 
 dotenv.load_dotenv()
 
@@ -15,9 +14,7 @@ SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET", None)
 SPOTIFY_REDIRECT_URI = os.getenv("SPOTIFY_REDIRECT_URI", None)
 
 
-def fetch_saved_tracks(
-    session: spotipy.Spotify, no_of_records: int = 100
-) -> List[dict]:
+def fetch_saved_tracks(session: spotipy.Spotify, no_of_records: int = 100) -> List[dict]:
     results = []
     offset = 0
     while no_of_records > 0:
@@ -25,9 +22,7 @@ def fetch_saved_tracks(
         response = session.current_user_saved_tracks(limit=limit, offset=offset)
         for item in response["items"]:
             track = item["track"]
-            results.append(
-                {"artist": track["artists"][0]["name"], "name": track["name"]}
-            )
+            results.append({"artist": track["artists"][0]["name"], "name": track["name"]})
         no_of_records -= limit
         offset += limit
     return results
