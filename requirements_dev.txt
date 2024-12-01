@@ -12,7 +12,9 @@
 build==1.2.1
     # via pip-tools
 click==8.1.7
-    # via pip-tools
+    # via
+    #   -c requirements.txt
+    #   pip-tools
 colorama==0.4.6
     # via
     #   -c requirements.txt
