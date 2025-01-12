@@ -28,7 +28,7 @@ class GithubRepoModel(BaseModel):
     url: str
     language: str | None = None
     stars: int
-    starred_at: str
+    date: str
     readme: str | None = None
 
 
@@ -43,9 +43,9 @@ repositories = Table(
     Column("url", String),
     Column("language", String),
     Column("stars", Integer),
-    Column("starred_at", String),
+    Column("date", String),
     Column("readme", Text),
-    Column("fetch_date", String),
+    Column("inserted_at", String),
 )
 
 
@@ -66,7 +66,7 @@ class DatastoreRepository:
             yield connection
             connection.commit()
 
-    def save_repositories(self, repos: list[GithubRepoModel], fetch_date: str) -> None:
+    def save_repositories(self, repos: list[GithubRepoModel], inserted_at: str) -> None:
         """Save multiple repositories to database."""
         with self.get_connection() as conn:
             for repo in repos:
@@ -76,49 +76,41 @@ class DatastoreRepository:
                     url=repo.url,
                     language=repo.language,
                     stars=repo.stars,
-                    starred_at=repo.starred_at,
+                    date=repo.date,
                     readme=repo.readme,
-                    fetch_date=fetch_date,
+                    inserted_at=inserted_at,
                 )
                 conn.execute(stmt)
 
-    def get_fetch_stats(self, fetch_date: str) -> dict:
-        """Get statistics for a specific fetch date."""
+    def get_latest_repositories(self) -> list[GithubRepoModel]:
+        """
+        Get all repositories from the latest insert date.
+
+        Returns:
+            List[GithubRepoModel]: List of repositories as GithubRepoModel instances
+        """
         with self.get_connection() as conn:
-            total_repos = conn.execute(
-                select(repositories).where(repositories.c.fetch_date == fetch_date).count()
-            ).scalar()
-
-            readme_count = conn.execute(
-                select(repositories)
-                .where(repositories.c.fetch_date == fetch_date)
-                .where(repositories.c.readme.is_not(None))
-                .count()
-            ).scalar()
-
-            return {"total_repos": total_repos, "readme_count": readme_count}
-
-    def get_repositories_by_language(self, language: str) -> list[dict]:
-        """Get all repositories for a specific language."""
-        with self.get_connection() as conn:
-            query = select(repositories).where(repositories.c.language == language)
-            return [dict(row) for row in conn.execute(query)]
-
-    def get_most_starred_repos(self, limit: int = 10) -> list[dict]:
-        """Get top N most starred repositories."""
-        with self.get_connection() as conn:
-            query = select(repositories).order_by(repositories.c.stars.desc()).limit(limit)
-            return [dict(row) for row in conn.execute(query)]
-
-    def get_latest_fetch_date(self) -> str | None:
-        """Get the most recent fetch date."""
-        with self.get_connection() as conn:
-            query = (
-                select(repositories.c.fetch_date)
-                .order_by(repositories.c.fetch_date.desc())
+            query = select(repositories).where(
+                repositories.c.inserted_at
+                == select(repositories.c.inserted_at)
+                .order_by(repositories.c.inserted_at.desc())
                 .limit(1)
+                .scalar_subquery()
             )
-            return conn.execute(query).scalar()
+            result = conn.execute(query)
+
+            return [
+                GithubRepoModel(
+                    name=row.name,
+                    description=row.description,
+                    url=row.url,
+                    language=row.language,
+                    stars=row.stars,
+                    date=row.date,
+                    readme=row.readme,
+                )
+                for row in result
+            ]
 
 
 class GithubRepository:
@@ -154,7 +146,7 @@ class GithubRepository:
                 url=repo.html_url,
                 language=repo.language,
                 stars=repo.stargazers_count,
-                starred_at=repo.created_at.isoformat(),
+                date=repo.created_at.isoformat(),
                 readme=self._get_readme_content(repo),
             )
             repositories.append(repo_data)
@@ -163,31 +155,30 @@ class GithubRepository:
 
 
 def main():
+    # authentication
     token = os.getenv("GITHUB_TOKEN")
     if not token:
         print("Please set GITHUB_TOKEN environment variable")
         exit(1)
 
-    # Initialize repositories
+    # github client
     github_client = Github(token)
     github_repo = GithubRepository(github_client)
+
+    # datastore client
     datastore_repo = DatastoreRepository("sqlite:///github_stars.db")
 
-    # Fetch and store data
-    print("Starting to fetch first 10 starred repositories...")
+    print("Fetching starred repositories...")
     repositories = github_repo.get_starred_repos(limit=10)
-    fetch_date = datetime.now().isoformat()
+    inserted_at = datetime.now().isoformat()
 
-    datastore_repo.save_repositories(repositories, fetch_date)
-    stats = datastore_repo.get_fetch_stats(fetch_date)
+    print("\nSaving repositories to database...")
+    datastore_repo.save_repositories(repositories, inserted_at)
 
-    print(f"\nSaved {stats['total_repos']} starred repositories to github_stars.db")
-    print(f"Successfully fetched READMEs for {stats['readme_count']} repositories")
-
-    # Example of using other repository methods
-    print("\nMost starred repositories:")
-    for repo in datastore_repo.get_most_starred_repos(limit=5):
-        print(f"- {repo['name']}: {repo['stars']} stars")
+    print("\nLatest repositories:")
+    latest_repos = datastore_repo.get_latest_repositories()
+    for repo in latest_repos:
+        print(f"- {repo.name}")
 
 
 if __name__ == "__main__":
