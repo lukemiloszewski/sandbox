@@ -2,8 +2,12 @@ import base64
 import os
 from contextlib import contextmanager
 from datetime import datetime
+from typing import Any
 
+import chromadb
 import dotenv
+from chromadb.api.client import Client
+from chromadb.config import Settings
 from github import Github
 from pydantic import BaseModel
 from sqlalchemy import (
@@ -86,9 +90,7 @@ class DatastoreRepository:
             yield connection
             connection.commit()
 
-    def save_repos(
-        self, user: GithubUser, repos: list[GithubRepo], inserted_at: str
-    ) -> None:
+    def save_repos(self, user: GithubUser, repos: list[GithubRepo], inserted_at: str) -> None:
         """
         Save multiple repositories to database for a given user.
 
@@ -252,6 +254,100 @@ class GithubRepository:
         return repositories
 
 
+class VectorDatastoreRepository:
+    """Repository for managing vector embeddings of GitHub repositories."""
+
+    def __init__(self, client: Client, collection_name: str):
+        """
+        Initialize the vector datastore repository.
+
+        Args:
+            client: ChromaDB client instance
+            collection_name: Name of the ChromaDB collection to use
+        """
+        self.client = client
+        self.collection_name = collection_name
+
+        self.collection = self.client.get_or_create_collection(collection_name)
+
+    def _create_document_from_repo(self, repo: GithubRepo) -> str:
+        """
+        Create a document string from a GitHub repository.
+
+        Args:
+            repo: GithubRepo instance to convert to document
+
+        Returns:
+            str: Combined document text
+        """
+        doc_parts = [
+            f"Repository: {repo.name}",
+            f"Description: {repo.description}" if repo.description else "",
+            f"Language: {repo.language}" if repo.language else "",
+            f"README: {repo.readme}" if repo.readme else "",
+        ]
+
+        return " ".join(filter(None, doc_parts))
+
+    def add_repos(self, user: GithubUser, repos: list[GithubRepo]) -> None:
+        """
+        Add repositories to the vector store.
+
+        Args:
+            user: GithubUser instance
+            repos: List of GithubRepo instances to store
+        """
+        if not repos:
+            return
+
+        documents = [self._create_document_from_repo(repo) for repo in repos]
+        ids = [f"{user.username}_{repo.name}_{hash(repo.url)}" for repo in repos]
+        metadatas = [
+            {
+                "username": user.username or "",
+                "user_name": user.name or "",
+                "repo_name": repo.name or "",
+                "repo_url": repo.url or "",
+                "repo_language": repo.language or "",
+                "repo_stars": repo.stars or "",
+                "repo_date": repo.date or "",
+            }
+            for repo in repos
+        ]
+
+        self.collection.add(documents=documents, metadatas=metadatas, ids=ids)
+
+    def query_repos(
+        self,
+        query_text: str,
+        n_results: int = 5,
+        filters: dict[str, Any] | None = None,
+        document_filter: dict[str, Any] | None = None,
+    ) -> dict[str, Any]:
+        """
+        Query the vector store for similar repositories.
+
+        Args:
+            query_text: Text to search for
+            n_results: Number of results to return
+            filters: Optional metadata filters (e.g., {"username": "example"})
+            document_filter: Optional document content filter (e.g., {"$contains": "python"})
+
+        Returns:
+            Dictionary containing query results directly from ChromaDB
+        """
+        return self.collection.query(
+            query_texts=[query_text],
+            n_results=n_results,
+            where=filters,
+            where_document=document_filter,
+        )
+
+    def delete_collection(self) -> None:
+        """Delete the current collection."""
+        self.client.delete_collection(self.collection_name)
+
+
 def main():
     token = os.getenv("GITHUB_TOKEN")
     if not token:
@@ -268,7 +364,7 @@ def main():
     user = github_repo.get_user_info(target_username)
 
     print(f"Querying repositories for {user.username}...")
-    repositories = github_repo.get_starred_repos(user, limit=10)
+    repositories = github_repo.get_starred_repos(user, limit=100)
 
     print("\nSaving repositories to database...")
     inserted_at = datetime.now().isoformat()
@@ -278,6 +374,23 @@ def main():
     latest_repos = datastore_repo.fetch_repos(user)
     for repo in latest_repos:
         print(f"- {repo.name}")
+
+    chroma_client = chromadb.PersistentClient(path="chroma_data")
+
+    vector_store = VectorDatastoreRepository(client=chroma_client, collection_name="github_repos")
+
+    vector_store.add_repos(user, latest_repos)
+
+    results = vector_store.query_repos(
+        "tutorials on building llms with agents", filters={"username": user.username}, n_results=20
+    )
+
+    print("\nSimilar repositories:")
+    for i, doc_id in enumerate(results["ids"][0]):
+        print(
+            f"- {results['metadatas'][0][i]['repo_name']} "
+            f"(Distance: {results['distances'][0][i]:.4f})"
+        )
 
 
 if __name__ == "__main__":
