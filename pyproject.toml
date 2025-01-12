@@ -1,10 +1,16 @@
+[project]
+name = "sandbox"
+version = "0.1.0"
+description = "Sandbox for random code and thoughts."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2.3",
+    "requests>=2.32.3",
+]
+
 [tool.ruff]
 line-length = 100
-lint.ignore = [
-    "E501",  # line too long, handled by black
-    "E731",  # lambda assignment
-    "UP007", # optional
-]
 lint.select = [
     "E",   # pycodestyle errors
     "W",   # pycodestyle warnings

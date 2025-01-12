@@ -11,6 +11,7 @@ Pillow
 pip-system-certs
 pydantic-core
 pydub
+PyGithub
 pyodbc
 pyportfolioopt
 python-certifi-win32
