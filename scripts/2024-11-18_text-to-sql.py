@@ -1,6 +1,5 @@
 import os
 import sqlite3
-from typing import Dict, List, Tuple
 
 import dotenv
 from openai import OpenAI
@@ -14,7 +13,7 @@ class TextToSQL:
         self.db_path = db_path
         self.table_schemas = self._load_table_schemas()
 
-    def _load_table_schemas(self) -> List[Dict]:
+    def _load_table_schemas(self) -> list[dict]:
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
 
@@ -102,7 +101,7 @@ Return only the raw SQL query without any markdown formatting, quotes, or backti
 
         return sql_query
 
-    def execute_query(self, user_query: str) -> List[Tuple]:
+    def execute_query(self, user_query: str) -> list[tuple]:
         table_name = self._determine_table_from_query(user_query)
         print(f"Selected table: {table_name}")
 

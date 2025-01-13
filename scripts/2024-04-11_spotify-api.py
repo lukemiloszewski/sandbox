@@ -1,5 +1,4 @@
 import os
-from typing import List
 
 import dotenv
 import spotipy
@@ -14,7 +13,7 @@ SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET", None)
 SPOTIFY_REDIRECT_URI = os.getenv("SPOTIFY_REDIRECT_URI", None)
 
 
-def fetch_saved_tracks(session: spotipy.Spotify, no_of_records: int = 100) -> List[dict]:
+def fetch_saved_tracks(session: spotipy.Spotify, no_of_records: int = 100) -> list[dict]:
     results = []
     offset = 0
     while no_of_records > 0:

@@ -1,7 +1,6 @@
 import datetime
 import os
 import pathlib
-from typing import List
 
 import dotenv
 import requests
@@ -33,7 +32,7 @@ def fetch_data(search_query: str = None) -> dict:
     return response.json()
 
 
-def parse_response(data: dict) -> List[dict]:
+def parse_response(data: dict) -> list[dict]:
     items = data.get("items", [])
     extracted_data = []
     for item in items:

@@ -7,13 +7,12 @@ Requirements:
 """
 
 import pathlib
-from typing import Optional
 
 from yt_dlp import YoutubeDL
 
 
 def create_subtitles_options(
-    output_directory: Optional[str] = None, output_file: Optional[str] = None
+    output_directory: str | None = None, output_file: str | None = None
 ) -> dict:
     """
     Create options to download subtitles file ONLY (no audio/video files), in vtt format
@@ -41,7 +40,7 @@ def create_subtitles_options(
 
 
 def create_audio_options(
-    output_directory: Optional[str] = None, output_file: Optional[str] = None
+    output_directory: str | None = None, output_file: str | None = None
 ) -> dict:
     """
     Create options to download audio file ONLY (no subtitles/video files), in mp3 format

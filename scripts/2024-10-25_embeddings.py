@@ -1,5 +1,5 @@
 import os
-from typing import List, Protocol, Union
+from typing import Protocol
 
 import dotenv
 import httpx
@@ -11,7 +11,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 
 class ClientProtocal(Protocol):
-    def generate_embeddings(self, text: Union[str, List[str]]) -> List: ...
+    def generate_embeddings(self, text: str | list[str]) -> list: ...
 
 
 class ClientOpenAI:
@@ -19,12 +19,12 @@ class ClientOpenAI:
         self.embedding_model = embedding_model
         self.client = OpenAI(api_key=api_key, http_client=http_client)
 
-    def generate_embeddings(self, text: Union[str, List[str]]):
+    def generate_embeddings(self, text: str | list[str]):
         if isinstance(text, str):
             text = [text]
 
         text = [t.replace("\n", " ") for t in text]
-        embeddings: List[resources.Embeddings] = self.client.embeddings.create(
+        embeddings: list[resources.Embeddings] = self.client.embeddings.create(
             input=text, model=self.embedding_model
         ).data
         rv = [e.embedding for e in embeddings]
@@ -35,7 +35,7 @@ class ClientSentenceTransformer:
     def __init__(self, model: str = "all-MiniLM-L6-v2"):
         self.client = SentenceTransformer(model)
 
-    def generate_embeddings(self, text: Union[str, List[str]]):
+    def generate_embeddings(self, text: str | list[str]):
         if isinstance(text, str):
             text = [text]
 
@@ -43,7 +43,7 @@ class ClientSentenceTransformer:
         return embeddings
 
 
-def generate_embeddings(client: ClientProtocal, text: Union[str, List[str]]):
+def generate_embeddings(client: ClientProtocal, text: str | list[str]):
     embeddings = client.generate_embeddings(text)
     return embeddings
 
