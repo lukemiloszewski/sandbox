@@ -347,44 +347,43 @@ class VectorDatastoreRepository:
         self.client.delete_collection(self.collection_name)
 
 
-def main():
-    token = os.getenv("GITHUB_TOKEN")
-    if not token:
-        print("Please set GITHUB_TOKEN environment variable")
-        exit(1)
+def run_datastore(github_repo, datastore_repo, github_username, n_limit=1000):
+    # fetch user from github
+    user = github_repo.get_user_info(github_username)
 
-    # clients
-    github_client = Github(token)
-    github_repo = GithubRepository(github_client)
-    datastore_repo = DatastoreRepository("sqlite:///.temp/github_stars.db")
-
-    # github user
-    target_username = "lukemiloszewski"
-    user = github_repo.get_user_info(target_username)
-
+    # fetch repositories from github
     print(f"Querying repositories for {user.username}...")
-    repositories = github_repo.get_starred_repos(user, limit=10)
+    repositories = github_repo.get_starred_repos(user, limit=n_limit)
 
+    # save repositories to database
     print("\nSaving repositories to database...")
     inserted_at = datetime.now().isoformat()
     datastore_repo.save_repos(user, repositories, inserted_at)
 
+
+def run_vectorstore(github_repo, vectorstore_repo, github_username):
+    # fetch user from github
+    user = github_repo.get_user_info(github_username)
+
+    # fetch latest repositories from database
     print("\nFetching repositories:")
     latest_repos = datastore_repo.fetch_repos(user)
     for repo in latest_repos:
         print(f"- {repo.name}")
 
-    chroma_client = chromadb.PersistentClient(path=".temp/chroma_data")
+    print("\nAdding repositories to vector store...")
+    vectorstore_repo.add_repos(user, latest_repos)
 
-    vector_store = VectorDatastoreRepository(client=chroma_client, collection_name="github_repos")
 
-    vector_store.add_repos(user, latest_repos)
+def query_vectorstore(github_repo, vectorstore_repo, github_username, query, n_limit=20):
+    # fetch user from github
+    user = github_repo.get_user_info(github_username)
 
-    results = vector_store.query_repos(
-        "tutorials on building llms with agents", filters={"username": user.username}, n_results=20
+    results = vectorstore_repo.query_repos(
+        query, filters={"username": user.username}, n_results=n_limit
     )
 
-    print("\nSimilar repositories:")
+    print(r"\Results:")
     for i, doc_id in enumerate(results["ids"][0]):
         print(
             f"- {results['metadatas'][0][i]['repo_name']} "
@@ -393,4 +392,33 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # authentication
+    token = os.getenv("GITHUB_TOKEN")
+    if not token:
+        print("Please set GITHUB_TOKEN environment variable")
+        exit(1)
+
+    # github client
+    github_client = Github(token)
+    github_repo = GithubRepository(github_client)
+
+    # datastore client
+    datastore_repo = DatastoreRepository("sqlite:///.temp/github_stars.db")
+
+    # vector store client
+    chroma_client = chromadb.PersistentClient(path=".temp/chroma_data")
+    vectorstore_repo = VectorDatastoreRepository(
+        client=chroma_client, collection_name="github_repos"
+    )
+
+    run_datastore(github_repo, datastore_repo, "lukemiloszewski", n_limit=1000)
+    run_vectorstore(github_repo, vectorstore_repo, "lukemiloszewski")
+
+    queries = [
+        "build llms using agents",
+        "cli tools for terminal productivity",
+        "quant finance",
+        "portfolio optimisation",
+    ]
+    for query in queries:
+        query_vectorstore(github_repo, vectorstore_repo, "lukemiloszewski", query, n_limit=20)
