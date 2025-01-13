@@ -7,7 +7,6 @@ from typing import Any
 import chromadb
 import dotenv
 from chromadb.api.client import Client
-from chromadb.config import Settings
 from github import Github
 from pydantic import BaseModel
 from sqlalchemy import (
@@ -357,14 +356,14 @@ def main():
     # clients
     github_client = Github(token)
     github_repo = GithubRepository(github_client)
-    datastore_repo = DatastoreRepository("sqlite:///github_stars.db")
+    datastore_repo = DatastoreRepository("sqlite:///.temp/github_stars.db")
 
     # github user
     target_username = "lukemiloszewski"
     user = github_repo.get_user_info(target_username)
 
     print(f"Querying repositories for {user.username}...")
-    repositories = github_repo.get_starred_repos(user, limit=100)
+    repositories = github_repo.get_starred_repos(user, limit=10)
 
     print("\nSaving repositories to database...")
     inserted_at = datetime.now().isoformat()
@@ -375,7 +374,7 @@ def main():
     for repo in latest_repos:
         print(f"- {repo.name}")
 
-    chroma_client = chromadb.PersistentClient(path="chroma_data")
+    chroma_client = chromadb.PersistentClient(path=".temp/chroma_data")
 
     vector_store = VectorDatastoreRepository(client=chroma_client, collection_name="github_repos")
 
