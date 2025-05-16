@@ -383,7 +383,7 @@ def query_vectorstore(github_repo, vectorstore_repo, github_username, query, n_l
         query, filters={"username": user.username}, n_results=n_limit
     )
 
-    print(r"\Results:")
+    print(f"\nResults for: '{query}':")
     for i, doc_id in enumerate(results["ids"][0]):
         print(
             f"- {results['metadatas'][0][i]['repo_name']} "
@@ -411,14 +411,16 @@ if __name__ == "__main__":
         client=chroma_client, collection_name="github_repos"
     )
 
-    run_datastore(github_repo, datastore_repo, "lukemiloszewski", n_limit=1000)
-    run_vectorstore(github_repo, vectorstore_repo, "lukemiloszewski")
+    # run_datastore(github_repo, datastore_repo, "lukemiloszewski", n_limit=1)
+    # run_vectorstore(github_repo, vectorstore_repo, "lukemiloszewski")
 
     queries = [
-        "build llms using agents",
-        "cli tools for terminal productivity",
-        "quant finance",
-        "portfolio optimisation",
+        # "build llms using agents",
+        # "cli tools for terminal productivity",
+        # "quant finance",
+        # "portfolio optimisation",
+        # "invoke multiple llms and synthesise answers",
+        "tool for htop or tree or terminal utilities on system monitoring",
     ]
     for query in queries:
         query_vectorstore(github_repo, vectorstore_repo, "lukemiloszewski", query, n_limit=20)
