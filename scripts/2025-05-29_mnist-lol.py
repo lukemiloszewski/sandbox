@@ -1,3 +1,12 @@
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#   "keras",
+#   "numpy",
+#   "tensorflow",
+# ]
+# ///
+
 import numpy as np
 import keras
 from keras import layers
