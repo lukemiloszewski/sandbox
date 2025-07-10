@@ -1,11 +1,12 @@
 init:
-	python -m pip install -r requirements.txt -r requirements_dev.txt
+	uv venv .venv --python 3.12
+	uv sync --all-extras
 
 format:
-	python -m ruff check scripts --fix --exclude '*.ipynb'
-	python -m ruff format scripts --exclude '*.ipynb'
+	uv run ruff check src tests --fix
+	uv run ruff format src tests
 
-pip:
-	python -m piptools compile -o requirements.txt requirements.in
-	python -m piptools compile -o requirements_dev.txt requirements_dev.in
-	python -m piptools sync requirements_dev.txt requirements.txt
+deps:
+	uv lock --check
+	uv lock --upgrade
+	uv export --format requirements.txt --output-file requirements.txt --no-hashes
