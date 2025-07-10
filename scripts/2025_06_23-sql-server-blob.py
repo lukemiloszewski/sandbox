@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, text, MetaData, Table, Column, Integer, String, LargeBinary
+from sqlalchemy import Column, Integer, LargeBinary, MetaData, String, Table, create_engine, text
 from sqlalchemy.engine import make_url
 
 datastore_url = make_url(...)

@@ -1,6 +1,7 @@
-import distutils
 import platform
 import sys
+
+import distutils
 
 
 def debug_system():

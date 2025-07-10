@@ -7,8 +7,8 @@
 # ]
 # ///
 
-import numpy as np
 import keras
+import numpy as np
 from keras import layers
 
 num_classes = 10

@@ -1,6 +1,5 @@
 from boto3 import session
 
-
 session = session.Session()
 client = session.client(
     's3',
