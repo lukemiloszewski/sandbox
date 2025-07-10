@@ -1,14 +1,11 @@
 import logging
 import os
-import re
 
 import dotenv
 import dspy
 from dspy import Parallel as DSPyParallel
 
 logger = logging.getLogger(__name__)
-
-
 
 
 class ProduceGist(dspy.Signature):
@@ -104,62 +101,13 @@ def massively_summarize(
     return toc_path[-1] + "\n\n" + "\n\n".join(valid_sections)
 
 
-def read_markdown_file(file_path: str) -> str:
-    with open(file_path) as f:
-        return f.read()
-
-
-def merge_markdown_files(directory: str, output_file: str):
-    with open(output_file, "w") as outfile:
-        for filename in os.listdir(directory):
-            if filename.endswith(".md"):
-                file_path = os.path.join(directory, filename)
-                with open(file_path) as infile:
-                    outfile.write(infile.read())
-                    outfile.write("\n\n")
-
-
-def generate_markdown_toc(markdown_text: str, toc_path: list = None, max_level: int = 3) -> str:
-    """Generate a Markdown Table of Contents for headings under toc_path up to max_level."""
-    toc_lines = []
-    current_path = []
-    toc_path = toc_path or []
-    for line in markdown_text.splitlines():
-        match = re.match(r"^(#{1,%d})\s+(.*)" % max_level, line)
-        if match:
-            level = len(match.group(1))
-            title = match.group(2).strip()
-            # Update current_path to match heading levels
-            if len(current_path) < level:
-                current_path.append(title)
-            else:
-                current_path = current_path[: level - 1] + [title]
-            # Only include headings that are descendants of toc_path
-            if current_path[: len(toc_path)] == toc_path:
-                anchor = re.sub(r"[^a-zA-Z0-9\- ]", "", title).replace(" ", "-").lower()
-                indent = "  " * (level - len(toc_path) - 1)
-                toc_lines.append(f"{indent}- [{title}](#{anchor})")
-    return "\n".join(toc_lines)
-
-
-def extract_headings(markdown_text: str, max_level: int = 3) -> list:
-    """Extract headings up to max_level as a list of strings for LLM sidebar TOC."""
-    headings = []
-    for line in markdown_text.splitlines():
-        match = re.match(r"^(#{1,%d})\s+(.*)" % max_level, line)
-        if match:
-            title = match.group(2).strip()
-            headings.append(title)
-    return headings
-
-
 if __name__ == "__main__":
     dotenv.load_dotenv()
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY_91")
 
     dspy.settings.configure(lm=dspy.LM("openai/gpt-4o-mini", cache=False, api_key=OPENAI_API_KEY))
 
-    with open("input.txt") as f:
+    with open("essay.txt", encoding="utf-8") as f:
         merged_content = f.read()
 
     chunk_size = 1000
