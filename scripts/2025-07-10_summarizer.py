@@ -107,11 +107,11 @@ if __name__ == "__main__":
 
     dspy.settings.configure(lm=dspy.LM("openai/gpt-4o-mini", cache=False, api_key=OPENAI_API_KEY))
 
-    with open("f.txt", encoding="utf-8") as f:
+    with open("input.txt", encoding="utf-8") as f:
         content = f.read()
 
     # if content is small, we can summarize it directly
-    chunk_size = 2000
+    chunk_size = 5000
     chunks = [content[i : i + chunk_size] for i in range(0, len(content), chunk_size)]
 
     summary = process_content(chunks=chunks)

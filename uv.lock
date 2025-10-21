@@ -1,4 +1,5 @@
 version = 1
+revision = 2
 requires-python = ">=3.12"
 resolution-markers = [
     "python_full_version >= '3.13' and sys_platform == 'linux'",
@@ -161,6 +162,82 @@ wheels = [
 ]
 
 [[package]]
+name = "audioop-lts"
+version = "0.2.2"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2.tar.gz", hash = "sha256:64d0c62d88e67b98a1a5e71987b7aa7b5bcffc7dcee65b635823dbdd0a8dbbd0" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-macosx_10_13_universal2.whl", hash = "sha256:fd3d4602dc64914d462924a08c1a9816435a2155d74f325853c1f1ac3b2d9800" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-macosx_10_13_x86_64.whl", hash = "sha256:550c114a8df0aafe9a05442a1162dfc8fec37e9af1d625ae6060fed6e756f303" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-macosx_11_0_arm64.whl", hash = "sha256:9a13dc409f2564de15dd68be65b462ba0dde01b19663720c68c1140c782d1d75" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:51c916108c56aa6e426ce611946f901badac950ee2ddaf302b7ed35d9958970d" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:47eba38322370347b1c47024defbd36374a211e8dd5b0dcbce7b34fdb6f8847b" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-manylinux2014_ppc64le.manylinux_2_17_ppc64le.manylinux_2_28_ppc64le.whl", hash = "sha256:ba7c3a7e5f23e215cb271516197030c32aef2e754252c4c70a50aaff7031a2c8" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-manylinux2014_s390x.manylinux_2_17_s390x.manylinux_2_28_s390x.whl", hash = "sha256:def246fe9e180626731b26e89816e79aae2276f825420a07b4a647abaa84becc" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl", hash = "sha256:e160bf9df356d841bb6c180eeeea1834085464626dc1b68fa4e1d59070affdc3" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:4b4cd51a57b698b2d06cb9993b7ac8dfe89a3b2878e96bc7948e9f19ff51dba6" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-musllinux_1_2_ppc64le.whl", hash = "sha256:4a53aa7c16a60a6857e6b0b165261436396ef7293f8b5c9c828a3a203147ed4a" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-musllinux_1_2_riscv64.whl", hash = "sha256:3fc38008969796f0f689f1453722a0f463da1b8a6fbee11987830bfbb664f623" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-musllinux_1_2_s390x.whl", hash = "sha256:15ab25dd3e620790f40e9ead897f91e79c0d3ce65fe193c8ed6c26cffdd24be7" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:03f061a1915538fd96272bac9551841859dbb2e3bf73ebe4a23ef043766f5449" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-win32.whl", hash = "sha256:3bcddaaf6cc5935a300a8387c99f7a7fbbe212a11568ec6cf6e4bc458c048636" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-win_amd64.whl", hash = "sha256:a2c2a947fae7d1062ef08c4e369e0ba2086049a5e598fda41122535557012e9e" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-abi3-win_arm64.whl", hash = "sha256:5f93a5db13927a37d2d09637ccca4b2b6b48c19cd9eda7b17a2e9f77edee6a6f" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-macosx_10_13_universal2.whl", hash = "sha256:73f80bf4cd5d2ca7814da30a120de1f9408ee0619cc75da87d0641273d202a09" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-macosx_10_13_x86_64.whl", hash = "sha256:106753a83a25ee4d6f473f2be6b0966fc1c9af7e0017192f5531a3e7463dce58" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-macosx_11_0_arm64.whl", hash = "sha256:fbdd522624141e40948ab3e8cdae6e04c748d78710e9f0f8d4dae2750831de19" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:143fad0311e8209ece30a8dbddab3b65ab419cbe8c0dde6e8828da25999be911" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:dfbbc74ec68a0fd08cfec1f4b5e8cca3d3cd7de5501b01c4b5d209995033cde9" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-manylinux2014_ppc64le.manylinux_2_17_ppc64le.manylinux_2_28_ppc64le.whl", hash = "sha256:cfcac6aa6f42397471e4943e0feb2244549db5c5d01efcd02725b96af417f3fe" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-manylinux2014_s390x.manylinux_2_17_s390x.manylinux_2_28_s390x.whl", hash = "sha256:752d76472d9804ac60f0078c79cdae8b956f293177acd2316cd1e15149aee132" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl", hash = "sha256:83c381767e2cc10e93e40281a04852facc4cd9334550e0f392f72d1c0a9c5753" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-musllinux_1_2_aarch64.whl", hash = "sha256:c0022283e9556e0f3643b7c3c03f05063ca72b3063291834cca43234f20c60bb" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-musllinux_1_2_ppc64le.whl", hash = "sha256:a2d4f1513d63c795e82948e1305f31a6d530626e5f9f2605408b300ae6095093" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-musllinux_1_2_riscv64.whl", hash = "sha256:c9c8e68d8b4a56fda8c025e538e639f8c5953f5073886b596c93ec9b620055e7" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-musllinux_1_2_s390x.whl", hash = "sha256:96f19de485a2925314f5020e85911fb447ff5fbef56e8c7c6927851b95533a1c" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-musllinux_1_2_x86_64.whl", hash = "sha256:e541c3ef484852ef36545f66209444c48b28661e864ccadb29daddb6a4b8e5f5" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-win32.whl", hash = "sha256:d5e73fa573e273e4f2e5ff96f9043858a5e9311e94ffefd88a3186a910c70917" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-win_amd64.whl", hash = "sha256:9191d68659eda01e448188f60364c7763a7ca6653ed3f87ebb165822153a8547" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp313-cp313t-win_arm64.whl", hash = "sha256:c174e322bb5783c099aaf87faeb240c8d210686b04bd61dfd05a8e5a83d88969" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-macosx_10_13_universal2.whl", hash = "sha256:f9ee9b52f5f857fbaf9d605a360884f034c92c1c23021fb90b2e39b8e64bede6" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-macosx_10_13_x86_64.whl", hash = "sha256:49ee1a41738a23e98d98b937a0638357a2477bc99e61b0f768a8f654f45d9b7a" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-macosx_11_0_arm64.whl", hash = "sha256:5b00be98ccd0fc123dcfad31d50030d25fcf31488cde9e61692029cd7394733b" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:a6d2e0f9f7a69403e388894d4ca5ada5c47230716a03f2847cfc7bd1ecb589d6" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:f9b0b8a03ef474f56d1a842af1a2e01398b8f7654009823c6d9e0ecff4d5cfbf" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-manylinux2014_ppc64le.manylinux_2_17_ppc64le.manylinux_2_28_ppc64le.whl", hash = "sha256:2b267b70747d82125f1a021506565bdc5609a2b24bcb4773c16d79d2bb260bbd" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-manylinux2014_s390x.manylinux_2_17_s390x.manylinux_2_28_s390x.whl", hash = "sha256:0337d658f9b81f4cd0fdb1f47635070cc084871a3d4646d9de74fdf4e7c3d24a" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-manylinux_2_31_riscv64.manylinux_2_39_riscv64.whl", hash = "sha256:167d3b62586faef8b6b2275c3218796b12621a60e43f7e9d5845d627b9c9b80e" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-musllinux_1_2_aarch64.whl", hash = "sha256:0d9385e96f9f6da847f4d571ce3cb15b5091140edf3db97276872647ce37efd7" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-musllinux_1_2_ppc64le.whl", hash = "sha256:48159d96962674eccdca9a3df280e864e8ac75e40a577cc97c5c42667ffabfc5" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-musllinux_1_2_riscv64.whl", hash = "sha256:8fefe5868cd082db1186f2837d64cfbfa78b548ea0d0543e9b28935ccce81ce9" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-musllinux_1_2_s390x.whl", hash = "sha256:58cf54380c3884fb49fdd37dfb7a772632b6701d28edd3e2904743c5e1773602" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:088327f00488cdeed296edd9215ca159f3a5a5034741465789cad403fcf4bec0" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-win32.whl", hash = "sha256:068aa17a38b4e0e7de771c62c60bbca2455924b67a8814f3b0dee92b5820c0b3" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-win_amd64.whl", hash = "sha256:a5bf613e96f49712073de86f20dbdd4014ca18efd4d34ed18c75bd808337851b" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/audioop-lts/0.2.2/audioop_lts-0.2.2-cp314-cp314t-win_arm64.whl", hash = "sha256:b492c3b040153e68b9fdaff5913305aaaba5bb433d8a7f73d5cf6a64ed3cc1dd" },
+]
+
+[[package]]
+name = "av"
+version = "13.1.0"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/av/13.1.0/av-13.1.0.tar.gz", hash = "sha256:d3da736c55847d8596eb8c26c60e036f193001db3bc5c10da8665622d906c17e" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/av/13.1.0/av-13.1.0-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:261dbc3f4b55f4f8f3375b10b2258fca7f2ab7a6365c01bc65e77a0d5327a195" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/av/13.1.0/av-13.1.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:83d259ef86b9054eb914bc7c6a7f6092a6d75cb939295e70ee979cfd92a67b99" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/av/13.1.0/av-13.1.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f3b4d3ca159eceab97e3c0fb08fe756520fb95508417f76e48198fda2a5b0806" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/av/13.1.0/av-13.1.0-cp312-cp312-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:40e8f757e373b73a2dc4640852a00cce4a4a92ef19b2e642a96d6994cd1fffbf" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/av/13.1.0/av-13.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d8aaec2c0bfd024359db3821d679009d4e637e1bee0321d20f61c54ed6b20f41" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/av/13.1.0/av-13.1.0-cp312-cp312-win_amd64.whl", hash = "sha256:5ea0deab0e6a739cb742fba2a3983d8102f7516a3cdf3c46669f3cac0ed1f351" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/av/13.1.0/av-13.1.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:47642ebaebfe20519b2391bd5b7c38b596efcd052bfd09c8d33058f94ddd0fd6" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/av/13.1.0/av-13.1.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:2f079c2daa3ae06557b3f6e9bed4fb9c876e8012175bec645ccd007199a302db" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/av/13.1.0/av-13.1.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1f0de8252deeeb1887637e88d4d9d18514e5cfe276bdb9e6ca8e9eef89d1667a" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/av/13.1.0/av-13.1.0-cp313-cp313-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:9ad0024f4def11b0cedfeee478fa6c6fd7ed3955e13387e0f27261fdda6121b4" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/av/13.1.0/av-13.1.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:cb88e2590eaed45233eb117f1dfab1a43ed9a997b2c46da9f08468dd00f14895" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/av/13.1.0/av-13.1.0-cp313-cp313-win_amd64.whl", hash = "sha256:c927e4fa4f6aeed4340b3e3b16b237d7cb743e5c1a55b92307407590ca4112aa" },
+]
+
+[[package]]
 name = "babel"
 version = "2.17.0"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
@@ -190,6 +267,19 @@ wheels = [
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/backrefs/5.9/backrefs-5.9-py313-none-any.whl", hash = "sha256:cc37b19fa219e93ff825ed1fed8879e47b4d89aa7a1884860e2db64ccd7c676b" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/backrefs/5.9/backrefs-5.9-py314-none-any.whl", hash = "sha256:df5e169836cc8acb5e440ebae9aad4bf9d15e226d3bad049cf3f6a5c20cc8dc9" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/backrefs/5.9/backrefs-5.9-py39-none-any.whl", hash = "sha256:f48ee18f6252b8f5777a22a00a09a85de0ca931658f1dd96d4406a34f3748c60" },
+]
+
+[[package]]
+name = "beautifulsoup4"
+version = "4.14.2"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+dependencies = [
+    { name = "soupsieve" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/beautifulsoup4/4.14.2/beautifulsoup4-4.14.2.tar.gz", hash = "sha256:2a98ab9f944a11acee9cc848508ec28d9228abfd522ef0fad6a02a72e0ded69e" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/beautifulsoup4/4.14.2/beautifulsoup4-4.14.2-py3-none-any.whl", hash = "sha256:5ef6fa3a8cbece8488d66985560f97ed091e22bbc4e9c2338508a9d5de6d4515" },
 ]
 
 [[package]]
@@ -259,7 +349,7 @@ name = "click"
 version = "8.2.1"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 dependencies = [
-    { name = "colorama", marker = "platform_system == 'Windows'" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
 sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/click/8.2.1/click-8.2.1.tar.gz", hash = "sha256:27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202" }
 wheels = [
@@ -273,6 +363,18 @@ source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simpl
 sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/cloudpickle/3.1.1/cloudpickle-3.1.1.tar.gz", hash = "sha256:b216fa8ae4019d5482a8ac3c95d8f6346115d8835911fd4aefd1a445e4242c64" }
 wheels = [
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/cloudpickle/3.1.1/cloudpickle-3.1.1-py3-none-any.whl", hash = "sha256:c8c5a44295039331ee9dad40ba100a9c7297b6f988e50e87ccdf3765a668350e" },
+]
+
+[[package]]
+name = "cloup"
+version = "3.0.8"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+dependencies = [
+    { name = "click" },
+]
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/cloup/3.0.8/cloup-3.0.8.tar.gz", hash = "sha256:f91c080a725196ddf74feabd6250266f466e97fc16dfe21a762cf6bc6beb3ecb" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/cloup/3.0.8/cloup-3.0.8-py2.py3-none-any.whl", hash = "sha256:6fe9474dc44fa06f8870e9c797f005de1e3ef891ddc1a9612d9b58598a038323" },
 ]
 
 [[package]]
@@ -347,6 +449,21 @@ wheels = [
 ]
 
 [[package]]
+name = "cython"
+version = "3.1.5"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/cython/3.1.5/cython-3.1.5.tar.gz", hash = "sha256:7e73c7e6da755a8dffb9e0e5c4398e364e37671778624188444f1ff0d9458112" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/cython/3.1.5/cython-3.1.5-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:38bf7bbe29e8508645d2c3d6313f7fb6872c22f54980f68819422d0812c95f69" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/cython/3.1.5/cython-3.1.5-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:61c42f881320a2b34a88806ddee6b424b3caa6fa193b008123704a2896b5bc37" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/cython/3.1.5/cython-3.1.5-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:3c9b6d424f8b4f621b2d08ee5c344970311df0dac5c259667786b21b77657460" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/cython/3.1.5/cython-3.1.5-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:08e998a4d5049ea75932674701fa283397477330d1583bc9f63b693a380a38c6" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/cython/3.1.5/cython-3.1.5-cp314-cp314-macosx_10_15_x86_64.whl", hash = "sha256:888bf3f12aadfb2dc2c41e83932f40fc2ac519933c809aae16e901c4413d6966" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/cython/3.1.5/cython-3.1.5-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:85ffc5aa27d2e175bab4c649299aa4ae2b4c559040a5bf50b0ad141e76e17032" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/cython/3.1.5/cython-3.1.5-py3-none-any.whl", hash = "sha256:1bef4a168f4f650d17d67b43792ed045829b570f1e4108c6c37a56fe268aa728" },
+]
+
+[[package]]
 name = "datasets"
 version = "4.0.0"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
@@ -368,6 +485,15 @@ dependencies = [
 sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/datasets/4.0.0/datasets-4.0.0.tar.gz", hash = "sha256:9657e7140a9050db13443ba21cb5de185af8af944479b00e7ff1e00a61c8dbf1" }
 wheels = [
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/datasets/4.0.0/datasets-4.0.0-py3-none-any.whl", hash = "sha256:7ef95e62025fd122882dbce6cb904c8cd3fbc829de6669a5eb939c77d50e203d" },
+]
+
+[[package]]
+name = "decorator"
+version = "5.2.1"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/decorator/5.2.1/decorator-5.2.1.tar.gz", hash = "sha256:65f266143752f734b0a7cc83c46f4618af75b8c5911b00ccb61d0ac9b6da0360" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/decorator/5.2.1/decorator-5.2.1-py3-none-any.whl", hash = "sha256:d316bb415a2d9e2d2b3abcc4084c6502fc09240e292cd76a76afc106a1c8e04a" },
 ]
 
 [[package]]
@@ -608,6 +734,30 @@ dependencies = [
 sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/gitpython/3.1.44/gitpython-3.1.44.tar.gz", hash = "sha256:c87e30b26253bf5418b01b0660f818967f3c503193838337fe5e573331249269" }
 wheels = [
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/gitpython/3.1.44/GitPython-3.1.44-py3-none-any.whl", hash = "sha256:9e0e10cda9bed1ee64bc9a6de50e7e38a9c9943241cd7f585f6df3ed28011110" },
+]
+
+[[package]]
+name = "glcontext"
+version = "3.0.0"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0.tar.gz", hash = "sha256:57168edcd38df2fc0d70c318edf6f7e59091fba1cd3dadb289d0aa50449211ef" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:848f870a2bc72a29de7ab6756b9e8f2e6ce052e17873ebc6b3f25129b6e0d58a" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:4b3b12a66f57379566dd4d36899ac265abdbe040f3fc3293f50cd6678a1dcc9b" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:449eaefd89c0519900715b8363ead59ac4aa32457722ca521ce01297441edb34" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:04921720740438ceea8fb8a38b5665963520c7c8f27bef03df8aeb3ea3cfbfb6" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:25538bdb106f673638d70e8a16a0c037a92a24c4cf40a05f0d3fa14b483d6194" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:d11f7701b900a5a34c994e1d91c547be1cc469b73f881471460fd905f69f9e4c" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp312-cp312-win32.whl", hash = "sha256:5d2b567eaf34adb016aadce81fd2f1d4c8e4a39e3d6f2a395ce528e2a350dd3f" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp312-cp312-win_amd64.whl", hash = "sha256:e80bb37ba727bd20c192f2754aea40c437a7665005c1001c10752f91913964e9" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:5bd37089570d3cdb01c6c0b315c49ce8a4dcdab2c431f5ba9f37a8b633cebfdf" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:857fd83e60f15580afd369dfb651a10d84a70ec35995622d253551bfb3ff9477" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:93fda9b378ce6d91f366e83e71ebdafdd167280a9834d1d6341ce6457c4e42ed" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp313-cp313-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:89ad50d34aa62f03f6aaf6ae39fc27afd1b0eaefb0281aac51f686dc5672d473" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:2634d5e9647a6d7b0c5a5c0c57e91ac98aa79759bffb42459af4374b049fab01" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:0140c5df37cb48271527355062d35589dc3e1e7e73b51adf9962ed5048115f69" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp313-cp313-win32.whl", hash = "sha256:6678e0552b516fa8fe62f500ef2b953bec991e82a003be2a9840d16556d03d2e" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/glcontext/3.0.0/glcontext-3.0.0-cp313-cp313-win_amd64.whl", hash = "sha256:18aa4b1df50e8c8ea39bd0f775f39bcc987521f92c4ed019ec7d70078471354d" },
 ]
 
 [[package]]
@@ -865,6 +1015,18 @@ wheels = [
 ]
 
 [[package]]
+name = "isosurfaces"
+version = "0.1.2"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+dependencies = [
+    { name = "numpy" },
+]
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/isosurfaces/0.1.2/isosurfaces-0.1.2.tar.gz", hash = "sha256:fa51ebe864ea9355b26830e27fdd6a41d5a58b419fa8d4b47e3b8b80718d6e21" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/isosurfaces/0.1.2/isosurfaces-0.1.2-py3-none-any.whl", hash = "sha256:525a49ba93f4dbc35303cd2faf30976af0f99d9274cfa2787aec016b8ef96c64" },
+]
+
+[[package]]
 name = "jinja2"
 version = "3.1.6"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
@@ -1096,6 +1258,82 @@ wheels = [
 ]
 
 [[package]]
+name = "manim"
+version = "0.19.0"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+dependencies = [
+    { name = "audioop-lts", marker = "python_full_version >= '3.13'" },
+    { name = "av" },
+    { name = "beautifulsoup4" },
+    { name = "click" },
+    { name = "cloup" },
+    { name = "decorator" },
+    { name = "isosurfaces" },
+    { name = "manimpango" },
+    { name = "mapbox-earcut" },
+    { name = "moderngl" },
+    { name = "moderngl-window" },
+    { name = "networkx" },
+    { name = "numpy" },
+    { name = "pillow" },
+    { name = "pycairo" },
+    { name = "pydub" },
+    { name = "pygments" },
+    { name = "rich" },
+    { name = "scipy" },
+    { name = "screeninfo" },
+    { name = "skia-pathops" },
+    { name = "srt" },
+    { name = "svgelements" },
+    { name = "tqdm" },
+    { name = "typing-extensions" },
+    { name = "watchdog" },
+]
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/manim/0.19.0/manim-0.19.0.tar.gz", hash = "sha256:748115ffc1dea24940fd6d7a3edcae0ccedc3e1874ebc1f5d7e5c6d69a4f4505" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/manim/0.19.0/manim-0.19.0-py3-none-any.whl", hash = "sha256:aee98d359d85733ea91f459d0ad8168da03593ce2001355432b5e31ca8bcdcaf" },
+]
+
+[[package]]
+name = "manimpango"
+version = "0.6.0"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/manimpango/0.6.0/manimpango-0.6.0.tar.gz", hash = "sha256:d959708e5c05e87317b37df5f6c5258aa9d1ed694a0b25b19d6a4f861841e191" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/manimpango/0.6.0/ManimPango-0.6.0-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:9d10bf902dbb66c98f28909ac9327296da141eaa696986a59b3459e3358d9a34" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/manimpango/0.6.0/ManimPango-0.6.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:6ab751239d82233d9c9ea1aa8f9cb23257733ee0607e82a76abc0cd75dde66e5" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/manimpango/0.6.0/ManimPango-0.6.0-cp312-cp312-win32.whl", hash = "sha256:7a8e2c164e7f03e2152e94fd5bf597e977ef67fbbf1031c72f2254479fc892af" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/manimpango/0.6.0/ManimPango-0.6.0-cp312-cp312-win_amd64.whl", hash = "sha256:061fd61a9f27df0c8ed75beb1fa4e5c06d5186eb37a5830a852aa3ac0737fcfe" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/manimpango/0.6.0/ManimPango-0.6.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:5156dc1fa2a6321f64a4110aa9dbe0c5ba507839f947fa3dfc72b5c63d729c88" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/manimpango/0.6.0/ManimPango-0.6.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:67809f65ec10397361a2650069ccac9fcf64babf75daf58eb38d9bcfb49e968b" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/manimpango/0.6.0/ManimPango-0.6.0-cp313-cp313-win32.whl", hash = "sha256:ba6279fd087ac3ac0a64c24a8b47fa0bdf0c8351c177cd07e3e793252899bd2d" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/manimpango/0.6.0/ManimPango-0.6.0-cp313-cp313-win_amd64.whl", hash = "sha256:bb13f56a41ba251f70fd57643dc42cee689a1ebbec5eaf305722c7100008e253" },
+]
+
+[[package]]
+name = "mapbox-earcut"
+version = "1.0.3"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+dependencies = [
+    { name = "numpy" },
+]
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/mapbox-earcut/1.0.3/mapbox_earcut-1.0.3.tar.gz", hash = "sha256:b6bac5d519d9947a6321a699c15d58e0b5740da61b9210ed229e05ad207c1c04" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/mapbox-earcut/1.0.3/mapbox_earcut-1.0.3-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:5be71b7ec2180a27ce1178d53933430a3292b6ac3f94f2144513ee51d9034007" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/mapbox-earcut/1.0.3/mapbox_earcut-1.0.3-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:eb874f7562a49ae0fb7bd47bcc9b4854cc53e3e4f7f26674f02f3cadb006ce16" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/mapbox-earcut/1.0.3/mapbox_earcut-1.0.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:73b9f06f2f8a795d835342aa80e021cfceda78fdca7bc07dc1a0b4aca90239f3" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/mapbox-earcut/1.0.3/mapbox_earcut-1.0.3-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:fdc55574ef7b613004874a459d2d59c07e1ef45cebb83f86c4958f7d3e2d6069" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/mapbox-earcut/1.0.3/mapbox_earcut-1.0.3-cp312-cp312-win32.whl", hash = "sha256:790f52c67a0bd81032eaf61ebc181b1825b8b6daf01cb69e9eaa38521dd07aeb" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/mapbox-earcut/1.0.3/mapbox_earcut-1.0.3-cp312-cp312-win_amd64.whl", hash = "sha256:cc1bbf35be0d9853dd448374330684ddbd0112497dee7d21b7417b0ab6236ac7" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/mapbox-earcut/1.0.3/mapbox_earcut-1.0.3-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:22859490a83a614750dee24c08502fbe14f01a808c0f0f8626261b43ec186762" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/mapbox-earcut/1.0.3/mapbox_earcut-1.0.3-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:ad9b97512b7e917cec9af399a344f8844b0ca6c074f354a5b06f58c393c4d9b0" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/mapbox-earcut/1.0.3/mapbox_earcut-1.0.3-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:05de0accc70431c2270dbb13fd75b6f10b19624d42f26b377995b1fb46ac5844" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/mapbox-earcut/1.0.3/mapbox_earcut-1.0.3-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:2d25c856a1ee6c69f51b82df5a06ea6cea66ce3a7c6043a602edfc5c2fe33e32" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/mapbox-earcut/1.0.3/mapbox_earcut-1.0.3-cp313-cp313-win32.whl", hash = "sha256:9ec67d2dc733c7235114e5fa93baae4aa2de8c6210e01e8efd85e5b9cc0deb53" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/mapbox-earcut/1.0.3/mapbox_earcut-1.0.3-cp313-cp313-win_amd64.whl", hash = "sha256:473012494fd7a51c424a6835fb03c9ee461c540df87492f0ee9bb2f56c456c0c" },
+]
+
+[[package]]
 name = "markdown"
 version = "3.8"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
@@ -1215,7 +1453,7 @@ version = "1.6.1"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 dependencies = [
     { name = "click" },
-    { name = "colorama", marker = "platform_system == 'Windows'" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
     { name = "ghp-import" },
     { name = "jinja2" },
     { name = "markdown" },
@@ -1298,6 +1536,49 @@ wheels = [
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/ml-dtypes/0.5.1/ml_dtypes-0.5.1-cp313-cp313t-macosx_10_13_universal2.whl", hash = "sha256:05f23447a1c20ddf4dc7c2c661aa9ed93fcb2658f1017c204d1e758714dc28a8" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/ml-dtypes/0.5.1/ml_dtypes-0.5.1-cp313-cp313t-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1b7fbe5571fdf28fd3aaab3ef4aafc847de9ebf263be959958c1ca58ec8eadf5" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/ml-dtypes/0.5.1/ml_dtypes-0.5.1-cp313-cp313t-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d13755f8e8445b3870114e5b6240facaa7cb0c3361e54beba3e07fa912a6e12b" },
+]
+
+[[package]]
+name = "moderngl"
+version = "5.12.0"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+dependencies = [
+    { name = "glcontext" },
+]
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0.tar.gz", hash = "sha256:52936a98ccb2f2e1d6e3cb18528b2919f6831e7e3f924e788b5873badce5129b" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:2750547707c1ec3790dfbeb9c90fb808672ff13f61cac392c706ba09fda10db0" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:c5c2a5fe06c7021183d9274df798f25516409c8d55898c324dae8a0b2de10144" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b6c4972f3ddd10a3de6c30311da2c25bc493d023796e16c5d4e0f8bd6d5770be" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:a4d497ec6a3f6afa9ebd0be816d9bfe2fe20fec2105acfb88d956619c3ed8eb4" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:2f3d240e9bc5d83257378bae59f8f35638b89d22bb003cf674b88fd7932161ce" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:6fa667d560d842e778e2a5968305fb78f9781616a11b1b93acd2562f97262ccf" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp312-cp312-win32.whl", hash = "sha256:0a02fddd54dccee1ca6060bfed75a2e6a17dd3ee06920fac418506d8a8233849" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp312-cp312-win_amd64.whl", hash = "sha256:8698a59ad03539a2982125b7998efc1c107ba31d5d03437b6fcd72cb2c226922" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:f6efb432f5164f871471d1da36e3a4be9dc3efd7a1e48d0ac6b751e556af5d02" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:9b09d8d15b2eaab41c8646a664429ec86af225fa25096758497cd212489d2e1e" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:071042dd4846e58cbe204cf49341b62cd209fdcb6d48018feb5a61c66707fcb2" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:91db8302ac7f5d7a82a967388677e1378ff078f1e16d05da37ce77f4633b93b1" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:51971d65ec96a212a814350c8b324ae0754353e1b61826d1a06aa2d060df170e" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:d56827360c19e831e986243b5daaf6a51006f1ec0d5372084ad446308763d19f" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp313-cp313-win32.whl", hash = "sha256:caa432c12b138a6c9571719075c4d103bdc2504cd31aeda38a00ad10fcf268cb" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl/5.12.0/moderngl-5.12.0-cp313-cp313-win_amd64.whl", hash = "sha256:e34d1cd38f7998258f76a08bb5e87f351ec653b7ea1928b2711f8719c10cefd1" },
+]
+
+[[package]]
+name = "moderngl-window"
+version = "3.1.1"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+dependencies = [
+    { name = "moderngl" },
+    { name = "numpy" },
+    { name = "pillow" },
+    { name = "pyglet" },
+    { name = "pyglm" },
+]
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl-window/3.1.1/moderngl_window-3.1.1.tar.gz", hash = "sha256:29c2827505f87399f3461d480b2778910fddeebe44ea803301215cf212a6c1bc" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/moderngl-window/3.1.1/moderngl_window-3.1.1-py3-none-any.whl", hash = "sha256:e3b3ac2b4e23afcbfdac1971318a4db893bed3ba6a8fbde3367b1226af39b2e5" },
 ]
 
 [[package]]
@@ -1468,7 +1749,6 @@ version = "12.6.4.1"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 wheels = [
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cublas-cu12/12.6.4.1/nvidia_cublas_cu12-12.6.4.1-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:08ed2686e9875d01b58e3cb379c6896df8e76c75e0d4a7f7dace3d7b6d9ef8eb" },
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cublas-cu12/12.6.4.1/nvidia_cublas_cu12-12.6.4.1-py3-none-manylinux_2_27_aarch64.whl", hash = "sha256:235f728d6e2a409eddf1df58d5b0921cf80cfa9e72b9f2775ccb7b4a87984668" },
 ]
 
 [[package]]
@@ -1476,8 +1756,6 @@ name = "nvidia-cuda-cupti-cu12"
 version = "12.6.80"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 wheels = [
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cuda-cupti-cu12/12.6.80/nvidia_cuda_cupti_cu12-12.6.80-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:166ee35a3ff1587f2490364f90eeeb8da06cd867bd5b701bf7f9a02b78bc63fc" },
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cuda-cupti-cu12/12.6.80/nvidia_cuda_cupti_cu12-12.6.80-py3-none-manylinux2014_aarch64.whl", hash = "sha256:358b4a1d35370353d52e12f0a7d1769fc01ff74a191689d3870b2123156184c4" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cuda-cupti-cu12/12.6.80/nvidia_cuda_cupti_cu12-12.6.80-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:6768bad6cab4f19e8292125e5f1ac8aa7d1718704012a0e3272a6f61c4bce132" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cuda-cupti-cu12/12.6.80/nvidia_cuda_cupti_cu12-12.6.80-py3-none-manylinux2014_x86_64.whl", hash = "sha256:a3eff6cdfcc6a4c35db968a06fcadb061cbc7d6dde548609a941ff8701b98b73" },
 ]
@@ -1487,7 +1765,6 @@ name = "nvidia-cuda-nvrtc-cu12"
 version = "12.6.77"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 wheels = [
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cuda-nvrtc-cu12/12.6.77/nvidia_cuda_nvrtc_cu12-12.6.77-py3-none-manylinux2014_aarch64.whl", hash = "sha256:5847f1d6e5b757f1d2b3991a01082a44aad6f10ab3c5c0213fa3e25bddc25a13" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cuda-nvrtc-cu12/12.6.77/nvidia_cuda_nvrtc_cu12-12.6.77-py3-none-manylinux2014_x86_64.whl", hash = "sha256:35b0cc6ee3a9636d5409133e79273ce1f3fd087abb0532d2d2e8fff1fe9efc53" },
 ]
 
@@ -1496,8 +1773,6 @@ name = "nvidia-cuda-runtime-cu12"
 version = "12.6.77"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 wheels = [
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cuda-runtime-cu12/12.6.77/nvidia_cuda_runtime_cu12-12.6.77-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:6116fad3e049e04791c0256a9778c16237837c08b27ed8c8401e2e45de8d60cd" },
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cuda-runtime-cu12/12.6.77/nvidia_cuda_runtime_cu12-12.6.77-py3-none-manylinux2014_aarch64.whl", hash = "sha256:d461264ecb429c84c8879a7153499ddc7b19b5f8d84c204307491989a365588e" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cuda-runtime-cu12/12.6.77/nvidia_cuda_runtime_cu12-12.6.77-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:ba3b56a4f896141e25e19ab287cd71e52a6a0f4b29d0d31609f60e3b4d5219b7" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cuda-runtime-cu12/12.6.77/nvidia_cuda_runtime_cu12-12.6.77-py3-none-manylinux2014_x86_64.whl", hash = "sha256:a84d15d5e1da416dd4774cb42edf5e954a3e60cc945698dc1d5be02321c44dc8" },
 ]
@@ -1507,10 +1782,9 @@ name = "nvidia-cudnn-cu12"
 version = "9.5.1.17"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 dependencies = [
-    { name = "nvidia-cublas-cu12" },
+    { name = "nvidia-cublas-cu12", marker = "sys_platform == 'linux'" },
 ]
 wheels = [
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cudnn-cu12/9.5.1.17/nvidia_cudnn_cu12-9.5.1.17-py3-none-manylinux_2_28_aarch64.whl", hash = "sha256:9fd4584468533c61873e5fda8ca41bac3a38bcb2d12350830c69b0a96a7e4def" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cudnn-cu12/9.5.1.17/nvidia_cudnn_cu12-9.5.1.17-py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:30ac3869f6db17d170e0e556dd6cc5eee02647abc31ca856634d5a40f82c15b2" },
 ]
 
@@ -1519,11 +1793,9 @@ name = "nvidia-cufft-cu12"
 version = "11.3.0.4"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 dependencies = [
-    { name = "nvidia-nvjitlink-cu12" },
+    { name = "nvidia-nvjitlink-cu12", marker = "sys_platform == 'linux'" },
 ]
 wheels = [
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cufft-cu12/11.3.0.4/nvidia_cufft_cu12-11.3.0.4-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:d16079550df460376455cba121db6564089176d9bac9e4f360493ca4741b22a6" },
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cufft-cu12/11.3.0.4/nvidia_cufft_cu12-11.3.0.4-py3-none-manylinux2014_aarch64.whl", hash = "sha256:8510990de9f96c803a051822618d42bf6cb8f069ff3f48d93a8486efdacb48fb" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cufft-cu12/11.3.0.4/nvidia_cufft_cu12-11.3.0.4-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:ccba62eb9cef5559abd5e0d54ceed2d9934030f51163df018532142a8ec533e5" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cufft-cu12/11.3.0.4/nvidia_cufft_cu12-11.3.0.4-py3-none-manylinux2014_x86_64.whl", hash = "sha256:768160ac89f6f7b459bee747e8d175dbf53619cfe74b2a5636264163138013ca" },
 ]
@@ -1534,7 +1806,6 @@ version = "1.11.1.6"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 wheels = [
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cufile-cu12/1.11.1.6/nvidia_cufile_cu12-1.11.1.6-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:cc23469d1c7e52ce6c1d55253273d32c565dd22068647f3aa59b3c6b005bf159" },
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cufile-cu12/1.11.1.6/nvidia_cufile_cu12-1.11.1.6-py3-none-manylinux_2_27_aarch64.whl", hash = "sha256:8f57a0051dcf2543f6dc2b98a98cb2719c37d3cee1baba8965d57f3bbc90d4db" },
 ]
 
 [[package]]
@@ -1542,10 +1813,8 @@ name = "nvidia-curand-cu12"
 version = "10.3.7.77"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 wheels = [
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-curand-cu12/10.3.7.77/nvidia_curand_cu12-10.3.7.77-py3-none-manylinux2014_aarch64.whl", hash = "sha256:6e82df077060ea28e37f48a3ec442a8f47690c7499bff392a5938614b56c98d8" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-curand-cu12/10.3.7.77/nvidia_curand_cu12-10.3.7.77-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:a42cd1344297f70b9e39a1e4f467a4e1c10f1da54ff7a85c12197f6c652c8bdf" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-curand-cu12/10.3.7.77/nvidia_curand_cu12-10.3.7.77-py3-none-manylinux2014_x86_64.whl", hash = "sha256:99f1a32f1ac2bd134897fc7a203f779303261268a65762a623bf30cc9fe79117" },
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-curand-cu12/10.3.7.77/nvidia_curand_cu12-10.3.7.77-py3-none-manylinux_2_27_aarch64.whl", hash = "sha256:7b2ed8e95595c3591d984ea3603dd66fe6ce6812b886d59049988a712ed06b6e" },
 ]
 
 [[package]]
@@ -1553,15 +1822,13 @@ name = "nvidia-cusolver-cu12"
 version = "11.7.1.2"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 dependencies = [
-    { name = "nvidia-cublas-cu12" },
-    { name = "nvidia-cusparse-cu12" },
-    { name = "nvidia-nvjitlink-cu12" },
+    { name = "nvidia-cublas-cu12", marker = "sys_platform == 'linux'" },
+    { name = "nvidia-cusparse-cu12", marker = "sys_platform == 'linux'" },
+    { name = "nvidia-nvjitlink-cu12", marker = "sys_platform == 'linux'" },
 ]
 wheels = [
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cusolver-cu12/11.7.1.2/nvidia_cusolver_cu12-11.7.1.2-py3-none-manylinux2014_aarch64.whl", hash = "sha256:0ce237ef60acde1efc457335a2ddadfd7610b892d94efee7b776c64bb1cac9e0" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cusolver-cu12/11.7.1.2/nvidia_cusolver_cu12-11.7.1.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:e9e49843a7707e42022babb9bcfa33c29857a93b88020c4e4434656a655b698c" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cusolver-cu12/11.7.1.2/nvidia_cusolver_cu12-11.7.1.2-py3-none-manylinux2014_x86_64.whl", hash = "sha256:6cf28f17f64107a0c4d7802be5ff5537b2130bfc112f25d5a30df227058ca0e6" },
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cusolver-cu12/11.7.1.2/nvidia_cusolver_cu12-11.7.1.2-py3-none-manylinux_2_27_aarch64.whl", hash = "sha256:dbbe4fc38ec1289c7e5230e16248365e375c3673c9c8bac5796e2e20db07f56e" },
 ]
 
 [[package]]
@@ -1569,11 +1836,9 @@ name = "nvidia-cusparse-cu12"
 version = "12.5.4.2"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 dependencies = [
-    { name = "nvidia-nvjitlink-cu12" },
+    { name = "nvidia-nvjitlink-cu12", marker = "sys_platform == 'linux'" },
 ]
 wheels = [
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cusparse-cu12/12.5.4.2/nvidia_cusparse_cu12-12.5.4.2-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:d25b62fb18751758fe3c93a4a08eff08effedfe4edf1c6bb5afd0890fe88f887" },
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cusparse-cu12/12.5.4.2/nvidia_cusparse_cu12-12.5.4.2-py3-none-manylinux2014_aarch64.whl", hash = "sha256:7aa32fa5470cf754f72d1116c7cbc300b4e638d3ae5304cfa4a638a5b87161b1" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cusparse-cu12/12.5.4.2/nvidia_cusparse_cu12-12.5.4.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:7556d9eca156e18184b94947ade0fba5bb47d69cec46bf8660fd2c71a4b48b73" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cusparse-cu12/12.5.4.2/nvidia_cusparse_cu12-12.5.4.2-py3-none-manylinux2014_x86_64.whl", hash = "sha256:23749a6571191a215cb74d1cdbff4a86e7b19f1200c071b3fcf844a5bea23a2f" },
 ]
@@ -1583,7 +1848,6 @@ name = "nvidia-cusparselt-cu12"
 version = "0.6.3"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 wheels = [
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cusparselt-cu12/0.6.3/nvidia_cusparselt_cu12-0.6.3-py3-none-manylinux2014_aarch64.whl", hash = "sha256:8371549623ba601a06322af2133c4a44350575f5a3108fb75f3ef20b822ad5f1" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-cusparselt-cu12/0.6.3/nvidia_cusparselt_cu12-0.6.3-py3-none-manylinux2014_x86_64.whl", hash = "sha256:e5c8a26c36445dd2e6812f1177978a24e2d37cacce7e090f297a688d1ec44f46" },
 ]
 
@@ -1592,7 +1856,6 @@ name = "nvidia-nccl-cu12"
 version = "2.26.2"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 wheels = [
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-nccl-cu12/2.26.2/nvidia_nccl_cu12-2.26.2-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:5c196e95e832ad30fbbb50381eb3cbd1fadd5675e587a548563993609af19522" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-nccl-cu12/2.26.2/nvidia_nccl_cu12-2.26.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:694cf3879a206553cc9d7dbda76b13efaf610fdb70a50cba303de1b0d1530ac6" },
 ]
 
@@ -1602,7 +1865,6 @@ version = "12.6.85"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 wheels = [
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-nvjitlink-cu12/12.6.85/nvidia_nvjitlink_cu12-12.6.85-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl", hash = "sha256:eedc36df9e88b682efe4309aa16b5b4e78c2407eac59e8c10a6a47535164369a" },
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-nvjitlink-cu12/12.6.85/nvidia_nvjitlink_cu12-12.6.85-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:cf4eaa7d4b6b543ffd69d6abfb11efdeb2db48270d94dfd3a452c24150829e41" },
 ]
 
 [[package]]
@@ -1610,8 +1872,6 @@ name = "nvidia-nvtx-cu12"
 version = "12.6.77"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 wheels = [
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-nvtx-cu12/12.6.77/nvidia_nvtx_cu12-12.6.77-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:f44f8d86bb7d5629988d61c8d3ae61dddb2015dee142740536bc7481b022fe4b" },
-    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-nvtx-cu12/12.6.77/nvidia_nvtx_cu12-12.6.77-py3-none-manylinux2014_aarch64.whl", hash = "sha256:adcaabb9d436c9761fca2b13959a2d237c5f9fd406c8e4b723c695409ff88059" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-nvtx-cu12/12.6.77/nvidia_nvtx_cu12-12.6.77-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:b90bed3df379fa79afbd21be8e04a0314336b8ae16768b58f2d34cb1d04cd7d2" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/nvidia-nvtx-cu12/12.6.77/nvidia_nvtx_cu12-12.6.77-py3-none-manylinux2014_x86_64.whl", hash = "sha256:6574241a3ec5fdc9334353ab8c479fe75841dbe8f4532a8fc97ce63503330ba1" },
 ]
@@ -1937,6 +2197,22 @@ wheels = [
 ]
 
 [[package]]
+name = "pycairo"
+version = "1.28.0"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pycairo/1.28.0/pycairo-1.28.0.tar.gz", hash = "sha256:26ec5c6126781eb167089a123919f87baa2740da2cca9098be8b3a6b91cc5fbc" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pycairo/1.28.0/pycairo-1.28.0-cp312-cp312-win32.whl", hash = "sha256:c00cfbb7f30eb7ca1d48886712932e2d91e8835a8496f4e423878296ceba573e" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pycairo/1.28.0/pycairo-1.28.0-cp312-cp312-win_amd64.whl", hash = "sha256:d50d190f5033992b55050b9f337ee42a45c3568445d5e5d7987bab96c278d8a6" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pycairo/1.28.0/pycairo-1.28.0-cp312-cp312-win_arm64.whl", hash = "sha256:957e0340ee1c279d197d4f7cfa96f6d8b48e453eec711fca999748d752468ff4" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pycairo/1.28.0/pycairo-1.28.0-cp313-cp313-win32.whl", hash = "sha256:d13352429d8a08a1cb3607767d23d2fb32e4c4f9faa642155383980ec1478c24" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pycairo/1.28.0/pycairo-1.28.0-cp313-cp313-win_amd64.whl", hash = "sha256:082aef6b3a9dcc328fa648d38ed6b0a31c863e903ead57dd184b2e5f86790140" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pycairo/1.28.0/pycairo-1.28.0-cp313-cp313-win_arm64.whl", hash = "sha256:026afd53b75291917a7412d9fe46dcfbaa0c028febd46ff1132d44a53ac2c8b6" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pycairo/1.28.0/pycairo-1.28.0-cp314-cp314-win32.whl", hash = "sha256:d0ab30585f536101ad6f09052fc3895e2a437ba57531ea07223d0e076248025d" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pycairo/1.28.0/pycairo-1.28.0-cp314-cp314-win_amd64.whl", hash = "sha256:94f2ed204999ab95a0671a0fa948ffbb9f3d6fb8731fe787917f6d022d9c1c0f" },
+]
+
+[[package]]
 name = "pydantic"
 version = "2.11.5"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
@@ -1994,6 +2270,58 @@ wheels = [
 ]
 
 [[package]]
+name = "pydub"
+version = "0.25.1"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pydub/0.25.1/pydub-0.25.1.tar.gz", hash = "sha256:980a33ce9949cab2a569606b65674d748ecbca4f0796887fd6f46173a7b0d30f" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pydub/0.25.1/pydub-0.25.1-py2.py3-none-any.whl", hash = "sha256:65617e33033874b59d87db603aa1ed450633288aefead953b30bded59cb599a6" },
+]
+
+[[package]]
+name = "pyglet"
+version = "2.1.9"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglet/2.1.9/pyglet-2.1.9.tar.gz", hash = "sha256:855bb55ffe05d98e95a7e4ad72969cb2ba8d57edbd6a7515db51a0479287f014" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglet/2.1.9/pyglet-2.1.9-py3-none-any.whl", hash = "sha256:ddd621c97729f8a344822792b4d51a600a8dd2113cde196d46376bdbcb6f1567" },
+]
+
+[[package]]
+name = "pyglm"
+version = "2.8.2"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2.tar.gz", hash = "sha256:b4847b0b60888b5c649b17b0a72d1f3f1ee07086cd5f431a7d977fad3cdbadab" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:cd1adae33ea6c50ec057eb9701dda913459207f942484263f0d9c3b813b660c2" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:5692aa3940ce1351c7963203d29ceb051a2f83a0721b2796cb18860f01dafc7e" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c90c07472602952dbd9f7f745c1212fa73fbb8913af02b70a2d3f04ee5afd3e7" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp312-cp312-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:edbc51eef30a79019649669c0d98d9295f6e370570a7767426aaa8452d5b9d46" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ad5f6b40f391bf7b4fd5256b4153ff955ef497638fa24bec0d21bac27a210947" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:40f088c4e5287c565d9295895feead6b747a0ddbada91088e18383737b328fed" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:3a0765a4ed676431627541a4561b36fa95b01823a488f291141de48f412e44b7" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:3271dca306c17d5ba70820125424fba5b4a5d3d3ea5b2a9d28a468bb86ee8e15" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:aa4168a8332116f8c8cd353b908eb96ccc7c5824dda0e44e072e623612f0e202" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:7e9d895e6697ff318b8c9b80dde957744cbfbeb0d22e61fce64906a3fe1f4bff" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp312-cp312-win32.whl", hash = "sha256:b6ec9dc9e12a4e1d2cb2c91656e59eb1f30309b2882e6e354ce437ff5f7610f3" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp312-cp312-win_amd64.whl", hash = "sha256:7968f3b047ee9b8d5ab8707c81371015f523385480a1bfe73eaf3d6e39e74db7" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp312-cp312-win_arm64.whl", hash = "sha256:db87fa313e341ef527b5376633b241e6f5ba4deb28feb8f19f11c9396fd88a42" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:a3c3f67f229f22b37a7076e36fd432795935cc1db25b7e133ae0ca1f7a9cbbb5" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:d9cd5b3189e6f78a8095e33e4f22b274c16a468dd074169efcfee4711ccb6c9a" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a46be69db5fb3421cb49cb0eb18080db62cb6f38322ab50ceac126f341128ad1" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp313-cp313-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:094bd832748ca0f2a21b4fb20752a98e1d85353bdb7526c51ce9d3c08a23991a" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e69b938f6de1679a7ad5019ee3896cb4aec9dde90c617bef8a7d0d718a1f1e4d" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:fa2d1511b7b04cb0a69c09f75d0b7f649c7809d3a3462abdc6745dd212b956a1" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:77f6b401007d5babbc6a328cb85b6d23f180e37f1a44b4516d8274f48acae0cf" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:402c0a4de35cc55ef9b27a463abcc3d8ff0fe5a6a3cc1b2d403c9d554e7dae0e" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:01db79724c736846105162b9cb89c1a9262fd5b3a87239e06dbb977e83f071ce" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:24957473986f26e907e17734e25761cee32475476a071976049b9b86aaad30ed" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp313-cp313-win32.whl", hash = "sha256:9cf869167f18251a554fbf54b2f65af31803a428a2b6e46b975b429a0e973ff8" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp313-cp313-win_amd64.whl", hash = "sha256:6a492dc524f3bffb27c47d9fc62afc690379ea311f1b9543487efe3869a3e1ae" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyglm/2.8.2/pyglm-2.8.2-cp313-cp313-win_arm64.whl", hash = "sha256:a200ec556f31a1936aefc88baa4cd7e01d011ae83a250f74876548247e1c5add" },
+]
+
+[[package]]
 name = "pygments"
 version = "2.19.1"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
@@ -2013,6 +2341,35 @@ dependencies = [
 sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pymdown-extensions/10.16/pymdown_extensions-10.16.tar.gz", hash = "sha256:71dac4fca63fabeffd3eb9038b756161a33ec6e8d230853d3cecf562155ab3de" }
 wheels = [
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pymdown-extensions/10.16/pymdown_extensions-10.16-py3-none-any.whl", hash = "sha256:f5dd064a4db588cb2d95229fc4ee63a1b16cc8b4d0e6145c0899ed8723da1df2" },
+]
+
+[[package]]
+name = "pyobjc-core"
+version = "11.1"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyobjc-core/11.1/pyobjc_core-11.1.tar.gz", hash = "sha256:b63d4d90c5df7e762f34739b39cc55bc63dbcf9fb2fb3f2671e528488c7a87fe" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyobjc-core/11.1/pyobjc_core-11.1-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:765b97dea6b87ec4612b3212258024d8496ea23517c95a1c5f0735f96b7fd529" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyobjc-core/11.1/pyobjc_core-11.1-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:18986f83998fbd5d3f56d8a8428b2f3e0754fd15cef3ef786ca0d29619024f2c" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyobjc-core/11.1/pyobjc_core-11.1-cp313-cp313t-macosx_10_13_universal2.whl", hash = "sha256:8849e78cfe6595c4911fbba29683decfb0bf57a350aed8a43316976ba6f659d2" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyobjc-core/11.1/pyobjc_core-11.1-cp314-cp314-macosx_11_0_universal2.whl", hash = "sha256:8cb9ed17a8d84a312a6e8b665dd22393d48336ea1d8277e7ad20c19a38edf731" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyobjc-core/11.1/pyobjc_core-11.1-cp314-cp314t-macosx_11_0_universal2.whl", hash = "sha256:f2455683e807f8541f0d83fbba0f5d9a46128ab0d5cc83ea208f0bec759b7f96" },
+]
+
+[[package]]
+name = "pyobjc-framework-cocoa"
+version = "11.1"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+dependencies = [
+    { name = "pyobjc-core", marker = "sys_platform != 'linux'" },
+]
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyobjc-framework-cocoa/11.1/pyobjc_framework_cocoa-11.1.tar.gz", hash = "sha256:87df76b9b73e7ca699a828ff112564b59251bb9bbe72e610e670a4dc9940d038" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyobjc-framework-cocoa/11.1/pyobjc_framework_cocoa-11.1-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:806de56f06dfba8f301a244cce289d54877c36b4b19818e3b53150eb7c2424d0" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyobjc-framework-cocoa/11.1/pyobjc_framework_cocoa-11.1-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:54e93e1d9b0fc41c032582a6f0834befe1d418d73893968f3f450281b11603da" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyobjc-framework-cocoa/11.1/pyobjc_framework_cocoa-11.1-cp313-cp313t-macosx_10_13_universal2.whl", hash = "sha256:fd5245ee1997d93e78b72703be1289d75d88ff6490af94462b564892e9266350" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyobjc-framework-cocoa/11.1/pyobjc_framework_cocoa-11.1-cp314-cp314-macosx_11_0_universal2.whl", hash = "sha256:aede53a1afc5433e1e7d66568cc52acceeb171b0a6005407a42e8e82580b4fc0" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/pyobjc-framework-cocoa/11.1/pyobjc_framework_cocoa-11.1-cp314-cp314t-macosx_11_0_universal2.whl", hash = "sha256:1b5de4e1757bb65689d6dc1f8d8717de9ec8587eb0c4831c134f13aba29f9b71" },
 ]
 
 [[package]]
@@ -2348,6 +2705,7 @@ dependencies = [
     { name = "dspy" },
     { name = "instructor" },
     { name = "keras" },
+    { name = "manim" },
     { name = "matplotlib" },
     { name = "numpy" },
     { name = "openai" },
@@ -2375,6 +2733,7 @@ requires-dist = [
     { name = "dspy", specifier = ">=2.6.27" },
     { name = "instructor", specifier = ">=1.9.2" },
     { name = "keras", specifier = ">=3.10.0" },
+    { name = "manim", specifier = ">=0.19.0" },
     { name = "matplotlib", specifier = ">=3.10.3" },
     { name = "numpy", specifier = ">=2.1.3" },
     { name = "openai", specifier = ">=1.82.1" },
@@ -2462,6 +2821,19 @@ wheels = [
 ]
 
 [[package]]
+name = "screeninfo"
+version = "0.8.1"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+dependencies = [
+    { name = "cython", marker = "sys_platform == 'darwin'" },
+    { name = "pyobjc-framework-cocoa", marker = "sys_platform == 'darwin'" },
+]
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/screeninfo/0.8.1/screeninfo-0.8.1.tar.gz", hash = "sha256:9983076bcc7e34402a1a9e4d7dabf3729411fd2abb3f3b4be7eba73519cd2ed1" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/screeninfo/0.8.1/screeninfo-0.8.1-py3-none-any.whl", hash = "sha256:e97d6b173856edcfa3bd282f81deb528188aff14b11ec3e195584e7641be733c" },
+]
+
+[[package]]
 name = "sentence-transformers"
 version = "4.1.0"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
@@ -2534,6 +2906,28 @@ wheels = [
 ]
 
 [[package]]
+name = "skia-pathops"
+version = "0.8.0.post2"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/skia-pathops/0.8.0.post2/skia_pathops-0.8.0.post2.zip", hash = "sha256:9e252cdeb6c4d162e82986d31dbd89c675d1677cb8019c2e13e6295d4a557269" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/skia-pathops/0.8.0.post2/skia_pathops-0.8.0.post2-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:aa11950fda8d390fe074cb0a83ac0d8a95f72087b0a38add30b9f22c3591554e" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/skia-pathops/0.8.0.post2/skia_pathops-0.8.0.post2-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:496def3492582161ce95a43b2c539af8b219c60fba223b25e8eef1ac8f9ee3d7" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/skia-pathops/0.8.0.post2/skia_pathops-0.8.0.post2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d4f3da50b749141caf6f17f032d2e3aae5faec96e39ed9c94e6b55e6e3a3a1c7" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/skia-pathops/0.8.0.post2/skia_pathops-0.8.0.post2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:89f82f2273208f72403da8dc7457d64fbd3f7d8f1f7f54cb8483eeda00747933" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/skia-pathops/0.8.0.post2/skia_pathops-0.8.0.post2-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:153055698053539b439720643a045ec3a50c35ea66bca7d89977e66a0d68282a" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/skia-pathops/0.8.0.post2/skia_pathops-0.8.0.post2-cp312-cp312-win32.whl", hash = "sha256:575061162264edd3c707e375c0fca85e7f72f5fada2e42c26853a6551c47e076" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/skia-pathops/0.8.0.post2/skia_pathops-0.8.0.post2-cp312-cp312-win_amd64.whl", hash = "sha256:6f2f60feceb7213a80ab7824f0c7e41de3c26a29a3a1ab8a1f60ec750292b444" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/skia-pathops/0.8.0.post2/skia_pathops-0.8.0.post2-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:4059d5c54dc4d2686e3b54c347fa1aad48ef6a0bc12ca75a27a260b291a98238" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/skia-pathops/0.8.0.post2/skia_pathops-0.8.0.post2-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:c0db10dfb00a1093a72e56827c172e3ca4922762f4c321d6ccc0703bc201b966" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/skia-pathops/0.8.0.post2/skia_pathops-0.8.0.post2-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:ddb5b52fae729ea456e777e715d17f25940e53bbd0ca0fad8b1e6268c7f493be" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/skia-pathops/0.8.0.post2/skia_pathops-0.8.0.post2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7db6b12d5cd85d0dec27f8f4ff41f8e2befa76a40170cda9715f98d2002d0da1" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/skia-pathops/0.8.0.post2/skia_pathops-0.8.0.post2-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:ae0a7937f6160247515a272f36598e35abb700ae4f1b5adec2e8119fcd535dcb" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/skia-pathops/0.8.0.post2/skia_pathops-0.8.0.post2-cp313-cp313-win32.whl", hash = "sha256:20e759441ce209e0fe026900057ac846e6912e7112b81229c330a6ad1e550efb" },
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/skia-pathops/0.8.0.post2/skia_pathops-0.8.0.post2-cp313-cp313-win_amd64.whl", hash = "sha256:1753fd7b4151c9ae3e5f198227ab39598a60be90c7ccc5c796a6ca5ef26d24d6" },
+]
+
+[[package]]
 name = "smmap"
 version = "5.0.2"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
@@ -2549,6 +2943,15 @@ source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simpl
 sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/sniffio/1.3.1/sniffio-1.3.1.tar.gz", hash = "sha256:f4324edc670a0f49750a81b895f35c3adb843cca46f0530f79fc1babb23789dc" }
 wheels = [
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/sniffio/1.3.1/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2" },
+]
+
+[[package]]
+name = "soupsieve"
+version = "2.8"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/soupsieve/2.8/soupsieve-2.8.tar.gz", hash = "sha256:e2dd4a40a628cb5f28f6d4b0db8800b8f581b65bb380b97de22ba5ca8d72572f" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/soupsieve/2.8/soupsieve-2.8-py3-none-any.whl", hash = "sha256:0cc76456a30e20f5d7f2e14a98a4ae2ee4e5abdc7c5ea0aafe795f344bc7984c" },
 ]
 
 [[package]]
@@ -2578,6 +2981,21 @@ wheels = [
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/sqlalchemy/2.0.41/sqlalchemy-2.0.41-cp313-cp313-win32.whl", hash = "sha256:bfc9064f6658a3d1cadeaa0ba07570b83ce6801a1314985bf98ec9b95d74e15f" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/sqlalchemy/2.0.41/sqlalchemy-2.0.41-cp313-cp313-win_amd64.whl", hash = "sha256:82ca366a844eb551daff9d2e6e7a9e5e76d2612c8564f58db6c19a726869c1df" },
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/sqlalchemy/2.0.41/sqlalchemy-2.0.41-py3-none-any.whl", hash = "sha256:57df5dc6fdb5ed1a88a1ed2195fd31927e705cad62dedd86b46972752a80f576" },
+]
+
+[[package]]
+name = "srt"
+version = "3.5.3"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/srt/3.5.3/srt-3.5.3.tar.gz", hash = "sha256:4884315043a4f0740fd1f878ed6caa376ac06d70e135f306a6dc44632eed0cc0" }
+
+[[package]]
+name = "svgelements"
+version = "1.9.6"
+source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
+sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/svgelements/1.9.6/svgelements-1.9.6.tar.gz", hash = "sha256:7c02ad6404cd3d1771fd50e40fbfc0550b0893933466f86a6eb815f3ba3f37f7" }
+wheels = [
+    { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/svgelements/1.9.6/svgelements-1.9.6-py2.py3-none-any.whl", hash = "sha256:8a5cf2cc066d98e713d5b875b1d6e5eeb9b92e855e835ebd7caab2713ae1dcad" },
 ]
 
 [[package]]
@@ -2741,23 +3159,23 @@ dependencies = [
     { name = "fsspec" },
     { name = "jinja2" },
     { name = "networkx" },
-    { name = "nvidia-cublas-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
-    { name = "nvidia-cuda-cupti-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
-    { name = "nvidia-cuda-nvrtc-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
-    { name = "nvidia-cuda-runtime-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
-    { name = "nvidia-cudnn-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
-    { name = "nvidia-cufft-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
-    { name = "nvidia-cufile-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
-    { name = "nvidia-curand-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
-    { name = "nvidia-cusolver-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
-    { name = "nvidia-cusparse-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
-    { name = "nvidia-cusparselt-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
-    { name = "nvidia-nccl-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
-    { name = "nvidia-nvjitlink-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
-    { name = "nvidia-nvtx-cu12", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
+    { name = "nvidia-cublas-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "nvidia-cuda-cupti-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "nvidia-cuda-nvrtc-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "nvidia-cuda-runtime-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "nvidia-cudnn-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "nvidia-cufft-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "nvidia-cufile-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "nvidia-curand-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "nvidia-cusolver-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "nvidia-cusparse-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "nvidia-cusparselt-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "nvidia-nccl-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "nvidia-nvjitlink-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "nvidia-nvtx-cu12", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
     { name = "setuptools" },
     { name = "sympy" },
-    { name = "triton", marker = "platform_machine == 'x86_64' and platform_system == 'Linux'" },
+    { name = "triton", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
     { name = "typing-extensions" },
 ]
 wheels = [
@@ -2780,7 +3198,7 @@ name = "tqdm"
 version = "4.67.1"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 dependencies = [
-    { name = "colorama", marker = "platform_system == 'Windows'" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
 sdist = { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/tqdm/4.67.1/tqdm-4.67.1.tar.gz", hash = "sha256:f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2" }
 wheels = [
@@ -2813,7 +3231,7 @@ name = "triton"
 version = "3.3.0"
 source = { registry = "https://nexus.ny1.ninetyone.com/repository/pypy-all/simple" }
 dependencies = [
-    { name = "setuptools" },
+    { name = "setuptools", marker = "sys_platform == 'linux'" },
 ]
 wheels = [
     { url = "https://nexus.ny1.ninetyone.com/repository/pypy-all/packages/triton/3.3.0/triton-3.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:b68c778f6c4218403a6bd01be7484f6dc9e20fe2083d22dd8aef33e3b87a10a3" },

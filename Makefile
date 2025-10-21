@@ -3,8 +3,8 @@ init:
 	uv sync --all-extras
 
 format:
-	uv run ruff check src tests --fix
-	uv run ruff format src tests
+	uv run ruff check scripts --fix
+	uv run ruff format scripts
 
 deps:
 	uv lock --check
